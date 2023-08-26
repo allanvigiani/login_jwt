@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  redis:
+    image: redis:6
+    restart: always
+    volumes:
+      - redis-data:/data
+    ports:
+      - 6379:6379
+
+  postgres:
+    image: postgres
+    volumes:
+      - ./users.sql:/docker-entrypoint-initdb.d/users.sql
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+
+volumes:
+  redis-data:
