@@ -35,18 +35,17 @@ Link do app
 
 #### Rota -> Login (POST)
 [http://localhost:3000/auth/login](http://localhost:3000/auth/login)  
-#### Exemplo
+#### Exemplo de login
 ```json
 {
   "email": "adm@adm.com",
   "password": "123456"
 }
 ```
-#### Logout
-#### Metodo DELETE
+#### Rota -> Logout (DELETE)
 [http://localhost:3000/auth/logout](http://localhost:3000/auth/logout)  
-OBS usar o token gerado no login
+- Utilizar o token recebido no login como Bearer Token
 
-#### Users
-#### Metodo GET
-[http://localhost:3000/users](http://localhost:3000/users)  
+#### Rota -> Users (GET)
+[http://localhost:3000/users](http://localhost:3000/users)
+- Utilizar o token recebido no login como Bearer Token
